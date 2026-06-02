@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Joy - Freelance Web Developer & Creative Technologist. Building high-performance, visually stunning custom websites and applications.">
+    <title>Joy | Freelance Web Developer & Creative Technologist</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Ambient Glow Orbs -->
+    <div class="bg-glow-orbs">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+
+    <!-- Interactive Background Canvas -->
+    <canvas id="nebula-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo magnetic">
+                <span class="logo-bracket">&lt;</span>JOY<span class="logo-dot">.</span>DEV<span class="logo-bracket">/&gt;</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active magnetic">Home</a>
+                <a href="#projects" class="nav-link magnetic">Projects</a>
+                <a href="#skills" class="nav-link magnetic">Skills</a>
+                <a href="#about" class="nav-link magnetic">About</a>
+                <a href="#contact" class="nav-link btn-contact magnetic">Hire Me</a>
+            </nav>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge animate-fade-in">
+                        <span class="badge-dot"></span> Available for Freelance Projects
+                    </div>
+                    <h1 class="hero-title animate-text">
+                        Forging <span class="gradient-text">Modern Web</span> Experiences
+                    </h1>
+                    <p class="hero-subtitle animate-fade-in-delayed">
+                        I bridge high-performance engineering and creative design to construct websites that captivate and convert.
+                    </p>
+                    <div class="hero-actions animate-fade-in-delayed">
+                        <a href="#projects" class="btn btn-primary magnetic"><i class="fa-solid fa-code"></i> Explore Work</a>
+                        <a href="#contact" class="btn btn-secondary magnetic"><i class="fa-regular fa-paper-plane"></i> Let's Talk</a>
+                    </div>
+                </div>
+                <div class="hero-visual animate-fade-in-delayed">
+                    <div class="code-card">
+                        <div class="code-card-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="tab-title">developer.js</span>
+                        </div>
+                        <div class="code-card-body">
+                            <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+  name: <span class="string">'Joy'</span>,
+  role: <span class="string">'Freelance Web Developer'</span>,
+  passion: <span class="string">'Interactive UI & Performance'</span>,
+  location: <span class="string">'Remote / Worldwide'</span>,
+  lovesSolving: [
+    <span class="string">'Slow Load Times'</span>,
+    <span class="string">'Clunky Animations'</span>,
+    <span class="string">'Complex Interfaces'</span>
+  ],
+  readyToBuild: <span class="boolean">true</span>
+};
+
+<span class="keyword">function</span> <span class="function">innovate</span>(<span class="variable">idea</span>) {
+  <span class="keyword">return</span> <span class="keyword">new</span> <span class="class">Masterpiece</span>(<span class="variable">idea</span>);
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator magnetic">
+                <a href="#projects">
+                    <span class="mouse">
+                        <span class="wheel"></span>
+                    </span>
+                    <span class="label">Scroll Down</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Projects Section (Interactive IDE Showcase) -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured <span class="gradient-text">Creations</span></h2>
+                    <p class="section-subtitle">Click through the code explorer files below to view selected project details, live stacks, and designs.</p>
+                </div>
+
+                <!-- IDE Interface Showcase -->
+                <div class="ide-container">
+                    <!-- Left Sidebar (File Explorer) -->
+                    <div class="ide-sidebar">
+                        <div class="sidebar-header">
+                            <span>WORKSPACE</span>
+                        </div>
+                        <div class="file-tree">
+                            <div class="tree-item folder open">
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <i class="fa-solid fa-folder-open"></i>
+                                <span>joy-portfolio</span>
+                            </div>
+                            <div class="tree-sub-items">
+                                <div class="tree-item file active" data-project="fitforge">
+                                    <i class="fa-brands fa-js-square js-color"></i>
+                                    <span>FitForge.js</span>
+                                </div>
+                                <div class="tree-item file" data-project="genuine-aqua">
+                                    <i class="fa-brands fa-js-square js-color"></i>
+                                    <span>GenuineAqua.js</span>
+                                </div>
+                                <div class="tree-item file" data-project="leaders-academy">
+                                    <i class="fa-solid fa-code html-color"></i>
+                                    <span>LeadersAcademy.html</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main IDE Editor -->
+                    <div class="ide-editor">
+                        <!-- Editor Tabs -->
+                        <div class="editor-tabs">
+                            <div class="editor-tab active" data-project="fitforge">
+                                <i class="fa-brands fa-js-square js-color"></i>
+                                <span>FitForge.js</span>
+                            </div>
+                            <div class="editor-tab" data-project="genuine-aqua">
+                                <i class="fa-brands fa-js-square js-color"></i>
+                                <span>GenuineAqua.js</span>
+                            </div>
+                            <div class="editor-tab" data-project="leaders-academy">
+                                <i class="fa-solid fa-code html-color"></i>
+                                <span>LeadersAcademy.html</span>
+                            </div>
+                        </div>
+
+                        <!-- Editor Content -->
+                        <div class="editor-workspace">
+                            <!-- Project details dynamically loaded/shown -->
+                            <div class="project-content active" id="project-fitforge">
+                                <div class="project-info">
+                                    <div class="project-header">
+                                        <span class="project-tag">Premium Fitness App</span>
+                                        <h3 class="project-name">FitForge Gym</h3>
+                                    </div>
+                                    <p class="project-description">
+                                        A premium gym and wellness landing page engineered with clean dark aesthetics and fluid UI components. Incorporates scroll-triggered animations via the Intersection Observer API, dynamic class schedules, an interactive BMI calculator with health ratings, and a step-by-step custom workout planner.
+                                    </p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">HTML5 / CSS3</span>
+                                        <span class="tech-tag">Vanilla JS</span>
+                                        <span class="tech-tag">Glassmorphism</span>
+                                        <span class="tech-tag">Intersection Observer</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="file:///C:/Users/JOY/OneDrive/Desktop/fitforge/index.html" target="_blank" class="btn btn-sm btn-primary magnetic"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                                        <a href="file:///C:/Users/JOY/OneDrive/Desktop/fitforge/" target="_blank" class="btn btn-sm btn-secondary magnetic"><i class="fa-brands fa-github"></i> Repository</a>
+                                    </div>
+                                </div>
+                                <div class="project-preview">
+                                    <div class="preview-wrapper">
+                                        <img src="assets/fitforge_preview.png" alt="FitForge Gym Screenshot" class="preview-img">
+                                        <div class="preview-overlay">
+                                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-content" id="project-genuine-aqua">
+                                <div class="project-info">
+                                    <div class="project-header">
+                                        <span class="project-tag">Sales & Service Portal</span>
+                                        <h3 class="project-name">Genuine Aqua RO Tech</h3>
+                                    </div>
+                                    <p class="project-description">
+                                        A professional client portal for a regional water purification sales and service dealership. Built featuring bilingual translation toggle (English/Tamil) dynamically translating the DOM, interactive water quality TDS level indicator ring, instant product search-and-filter database catalog, and robust appointment booking validation with direct WhatsApp lead routing.
+                                    </p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">HTML5 / CSS3</span>
+                                        <span class="tech-tag">Bilingual JS</span>
+                                        <span class="tech-tag">TDS Progress Ring</span>
+                                        <span class="tech-tag">Lead Validation</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="file:///C:/Users/JOY/OneDrive/Desktop/Genuine%20Aqua%20services/index.html" target="_blank" class="btn btn-sm btn-primary magnetic"><i class="fa-solid fa-arrow-up-right-from-square"></i> Launch App</a>
+                                        <a href="file:///C:/Users/JOY/OneDrive/Desktop/Genuine%20Aqua%20services/" target="_blank" class="btn btn-sm btn-secondary magnetic"><i class="fa-brands fa-github"></i> Codebase</a>
+                                    </div>
+                                </div>
+                                <div class="project-preview">
+                                    <div class="preview-wrapper">
+                                        <img src="assets/genuine_aqua_preview.png" alt="Genuine Aqua Screenshot" class="preview-img">
+                                        <div class="preview-overlay">
+                                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-content" id="project-leaders-academy">
+                                <div class="project-info">
+                                    <div class="project-header">
+                                        <span class="project-tag">Institutional Portal & Pitch Deck</span>
+                                        <h3 class="project-name">The Leaders Academy</h3>
+                                    </div>
+                                    <p class="project-description">
+                                        An educational institution landing page built for a multi-stream school group. Equipped with an interactive tuition term fees calculator estimating transport distance and add-on services, a canvas-based floating particle background system, and a keyboard-navigable overlays pitch deck for professional digital partnership presentations.
+                                    </p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Canvas Particles</span>
+                                        <span class="tech-tag">Fee Estimator Widget</span>
+                                        <span class="tech-tag">Pitch Deck HUD</span>
+                                        <span class="tech-tag">CSS Keyframes</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="file:///C:/Users/JOY/OneDrive/Desktop/school%20web%20site/index.html" target="_blank" class="btn btn-sm btn-primary magnetic"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Portal</a>
+                                        <a href="file:///C:/Users/JOY/OneDrive/Desktop/school%20web%20site/" target="_blank" class="btn btn-sm btn-secondary magnetic"><i class="fa-brands fa-github"></i> View Source</a>
+                                    </div>
+                                </div>
+                                <div class="project-preview">
+                                    <div class="preview-wrapper">
+                                        <img src="assets/leaders_academy_preview.png" alt="The Leaders Academy Screenshot" class="preview-img">
+                                        <div class="preview-overlay">
+                                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-sec">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My Tech <span class="gradient-text">Arsenal</span></h2>
+                    <p class="section-subtitle">A collection of specialized frameworks, libraries, and languages I leverage to create premium digital products.</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- Frontend -->
+                    <div class="skill-category">
+                        <h3 class="category-title"><i class="fa-solid fa-laptop-code"></i> Frontend Engineering</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>HTML5 / CSS3 / ES6+</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" data-level="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>React & Next.js</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" data-level="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>WebGL (Three.js) / Animation (GSAP)</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" data-level="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend / Architecture -->
+                    <div class="skill-category">
+                        <h3 class="category-title"><i class="fa-solid fa-server"></i> Backend & Architecture</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Node.js / Express</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" data-level="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>APIs & Microservices</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" data-level="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Cloud Deployments (Vercel, AWS)</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" data-level="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-info">
+                        <h2 class="section-title">Behind the <span class="gradient-text">Code</span></h2>
+                        <p class="about-text">
+                            Hello! I'm Joy, a freelance web developer who lives at the intersection of aesthetic design and logical engineering. I specialize in crafting bespoke websites and dynamic applications that offer blazing fast speeds and fluid interactions.
+                        </p>
+                        <p class="about-text">
+                            With over 5 years of contract and freelance experience working with startups and agencies worldwide, I've honed the ability to dissect business problems and transform them into gorgeous, robust web apps that perform under load.
+                        </p>
+                        
+                        <div class="experience-stats">
+                            <div class="stat-card">
+                                <h4 class="stat-number">50+</h4>
+                                <p class="stat-label">Projects Completed</p>
+                            </div>
+                            <div class="stat-card">
+                                <h4 class="stat-number">5+</h4>
+                                <p class="stat-label">Years of Experience</p>
+                            </div>
+                            <div class="stat-card">
+                                <h4 class="stat-number">99%</h4>
+                                <p class="stat-label">Client Satisfaction</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-philosophy">
+                        <div class="philosophy-box">
+                            <h3 class="philosophy-title"><i class="fa-solid fa-gem"></i> Core Philosophy</h3>
+                            <ul class="philosophy-list">
+                                <li>
+                                    <strong>Performance First:</strong> Beautiful layouts mean nothing if they load slowly. Fast websites reduce bounce rates and increase conversion.
+                                </li>
+                                <li>
+                                    <strong>Micro-Interactions:</strong> Subtle, responsive animations make the web feel alive and intuitive.
+                                </li>
+                                <li>
+                                    <strong>Pixel Perfection:</strong> Rigid alignment, consistent grids, and flawless responsive layouts define quality.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Start a <span class="gradient-text">Project</span></h2>
+                    <p class="section-subtitle">Have a freelance project or an agency overflow opportunity? Pitch it below and let's create something remarkable.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Direct Info -->
+                    <div class="contact-details">
+                        <div class="contact-card">
+                            <h3>Let's Connect</h3>
+                            <p>Ready to bring your ideas to life? Get in touch directly or use the contact form.</p>
+                            
+                            <div class="contact-methods">
+                                <a href="mailto:joygibson2400@gmail.com" class="contact-method magnetic">
+                                    <div class="icon-box"><i class="fa-regular fa-envelope"></i></div>
+                                    <div class="method-text">
+                                        <span>Email</span>
+                                        <strong>joygibson2400@gmail.com</strong>
+                                    </div>
+                                </a>
+                                <a href="https://wa.me/916382436963" target="_blank" class="contact-method magnetic">
+                                    <div class="icon-box"><i class="fa-brands fa-whatsapp"></i></div>
+                                    <div class="method-text">
+                                        <span>Phone / WhatsApp</span>
+                                        <strong>+91 6382436963</strong>
+                                    </div>
+                                </a>
+                                <div class="contact-method">
+                                    <div class="icon-box"><i class="fa-solid fa-globe"></i></div>
+                                    <div class="method-text">
+                                        <span>Availability</span>
+                                        <strong>Remote (EST / CET / IST)</strong>
+                                    </div>
+                                </div>
+                                <a href="https://maps.google.com/?q=24,+Kamachi+Nagar,+Kulathupalayam,+Kovaipudur,+Tamil+Nadu+641042" target="_blank" class="contact-method magnetic">
+                                    <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                                    <div class="method-text">
+                                        <span>Address</span>
+                                        <strong>24, Kamachi Nagar, Kulathupalayam,<br>Kovaipudur, Tamil Nadu 641042</strong>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="social-links">
+                                <a href="https://github.com/JOY-1245" target="_blank" class="social-icon magnetic"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="social-icon magnetic"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://www.instagram.com/x__joyyy?igsh=MXV3dDY3YTBmeTJzbg==" target="_blank" class="social-icon magnetic"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <form id="portfolio-contact-form" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Your Email</label>
+                                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Project Type</label>
+                                <select id="subject" name="subject">
+                                    <option value="custom-dev">Custom Web Development</option>
+                                    <option value="e-commerce">E-Commerce Storefront</option>
+                                    <option value="consulting">Performance Consulting</option>
+                                    <option value="other">Other Collaboration</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Project Description</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project, timeline, and goals..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit magnetic">
+                                <span class="btn-text">Send Proposal</span> <i class="fa-regular fa-paper-plane"></i>
+                            </button>
+                            <div class="form-feedback-message"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 JOY.DEV. All rights reserved. Created with passion.</p>
+            <p class="footer-tagline">Code + Art = Digital Synergy</p>
+        </div>
+    </footer>
+
+    <!-- Script File -->
+    <script src="app.js"></script>
+</body>
+</html>
