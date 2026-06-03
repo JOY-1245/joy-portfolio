@@ -838,12 +838,14 @@ section {
 
 .profile-card {
     position: relative;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 2.5rem;
     border-radius: 16px;
     background: var(--bg-card);
     border: 1px solid var(--border-glass);
     padding: 1.5rem;
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
-    margin-bottom: 2.5rem;
     transition: var(--transition-smooth);
     overflow: hidden;
     display: flex;
